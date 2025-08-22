@@ -58,26 +58,22 @@ export interface PricingTier {
 }
 
 export const siteConfig = {
-  name: 'Kortix Suna',
-  description: 'The Generalist AI Worker that can act on your behalf.',
-  cta: 'Start Free',
+  name: 'Lynx AI',
+  description: 'Assistente IA Inteligente by Apex7 AI',
+  cta: 'Experimente Grátis',
   url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-  keywords: ['AI Worker', 'Generalist AI', 'Open Source AI', 'Autonomous Agent'],
+  keywords: ['AI Worker', 'Assistente IA', 'Inteligência Artificial', 'Autonomous Agent'],
   links: {
-    email: 'support@kortix.ai',
-    twitter: 'https://x.com/kortixai',
-    // discord: 'https://discord.gg/kortixai',
-    github: 'https://github.com/Kortix-ai/Suna',
-    instagram: 'https://instagram.com/kortixai',
+    email: 'contato@apex7ai.com.br',
+    // Redes sociais serão configuradas posteriormente para Apex7 AI
   },
   nav: {
     links: [
       { id: 1, name: 'Home', href: '#hero' },
-      { id: 2, name: 'Process', href: '#process' },
-      // { id: 3, name: 'Use Cases', href: '#use-cases' },
-      { id: 4, name: 'Open Source', href: '#open-source' },
-      { id: 5, name: 'Pricing', href: '#pricing' },
-      { id: 6, name: 'Enterprise', href: '/enterprise' },
+      { id: 2, name: 'Processo', href: '#process' },
+      { id: 4, name: 'Tecnologia', href: '#technology' },
+      { id: 5, name: 'Preços', href: '#pricing' },
+      { id: 6, name: 'Empresa', href: '#company' },
     ],
   },
   hero: {
@@ -107,12 +103,12 @@ export const siteConfig = {
         />
       </svg>
     ),
-    badge: '100% OPEN SOURCE',
-    githubUrl: 'https://github.com/kortix-ai/suna',
-    title: 'Kortix – Build, manage and train your AI Workforce.',
+    badge: 'TECNOLOGIA AVANÇADA',
+    githubUrl: '', // GitHub removido conforme solicitado
+    title: 'Lynx AI – Seu Assistente IA Personalizado.',
     description:
-      'Kortix – open-source platform to build, manage and train your AI Workforce.',
-    inputPlaceholder: 'Ask Suna to...',
+      'Lynx AI by Apex7 AI – Tecnologia avançada de IA para automatizar tarefas e aumentar produtividade.',
+    inputPlaceholder: 'Pergunte ao Lynx...',
   },
   cloudPricingItems: [
     {
@@ -503,9 +499,9 @@ export const siteConfig = {
     ],
   },
   featureSection: {
-    title: 'How Kortix Suna Works',
+    title: 'Como o Lynx AI Funciona',
     description:
-      'Discover how Kortix Suna transforms your commands into action in four easy steps',
+      'Descubra como o Lynx AI transforma seus comandos em ação em quatro etapas simples',
     items: [
       {
         id: 1,
@@ -542,9 +538,9 @@ export const siteConfig = {
     ],
   },
   bentoSection: {
-    title: 'Empower Your Workflow with Kortix Suna',
+    title: 'Potencialize Seu Workflow com Lynx AI',
     description:
-      'Let Kortix Suna act on your behalf with advanced AI capabilities, seamless integrations, and autonomous task execution.',
+      'Deixe o Lynx AI agir em seu nome com capacidades avançadas de IA, integrações perfeitas e execução autônoma de tarefas.',
     items: [
       {
         id: 1,
@@ -916,9 +912,9 @@ export const siteConfig = {
     },
   },
   pricing: {
-    title: 'Open Source & Free Forever',
+    title: 'Planos Flexíveis para Sua Empresa',
     description:
-      'Kortix Suna is 100% open source and free to use. No hidden fees, no premium features locked behind paywalls.',
+      'Lynx AI oferece planos flexíveis para diferentes necessidades empresariais. Escolha o que melhor se adapta ao seu negócio.',
     pricingItems: [
       {
         name: 'Community',
@@ -1235,42 +1231,36 @@ export const siteConfig = {
   },
   footerLinks: [
     {
-      title: 'Kortix',
+      title: 'Apex7 AI',
       links: [
-        { id: 1, title: 'About', url: 'https://kortix.ai' },
-        { id: 3, title: 'Contact', url: 'mailto:hey@kortix.ai' },
-        { id: 4, title: 'Careers', url: 'https://kortix.ai/careers' },
+        { id: 1, title: 'Sobre', url: '#company' },
+        { id: 3, title: 'Contato', url: 'mailto:contato@apex7ai.com.br' },
       ],
     },
     {
-      title: 'Resources',
+      title: 'Recursos',
       links: [
-        {
-          id: 5,
-          title: 'Documentation',
-          url: 'https://github.com/Kortix-ai/Suna',
-        },
-        { id: 7, title: 'Discord', url: 'https://discord.gg/Py6pCBUUPw' },
-        { id: 8, title: 'GitHub', url: 'https://github.com/Kortix-ai/Suna' },
+        { id: 5, title: 'Documentação', url: '#technology' },
+        { id: 7, title: 'Suporte', url: 'mailto:suporte@apex7ai.com.br' },
       ],
     },
     {
-      title: 'Legal',
+      title: 'Jurídico',
       links: [
         {
           id: 9,
-          title: 'Privacy Policy',
-          url: 'https://suna.so/legal?tab=privacy',
+          title: 'Política de Privacidade',
+          url: '/legal?tab=privacy',
         },
         {
           id: 10,
-          title: 'Terms of Service',
-          url: 'https://suna.so/legal?tab=terms',
+          title: 'Termos de Serviço',
+          url: '/legal?tab=terms',
         },
         {
           id: 11,
-          title: 'License Apache 2.0',
-          url: 'https://github.com/Kortix-ai/Suna/blob/main/LICENSE',
+          title: 'Licença',
+          url: '/legal?tab=license',
         },
       ],
     },

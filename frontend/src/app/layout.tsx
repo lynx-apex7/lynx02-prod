@@ -33,25 +33,25 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description:
-    'Kortix is a fully open source AI assistant that helps you accomplish real-world tasks with ease. Through natural conversation, Kortix becomes your digital companion for research, data analysis, and everyday challenges.',
+    'Lynx AI by Apex7 AI é um assistente de inteligência artificial avançado que ajuda você a realizar tarefas do mundo real com facilidade. Através de conversação natural, o Lynx AI se torna seu companheiro digital para pesquisa, análise de dados e desafios cotidianos.',
   keywords: [
-    'AI',
-    'artificial intelligence',
-    'browser automation',
+    'IA',
+    'inteligência artificial',
+    'automação de navegador',
     'web scraping',
-    'file management',
-    'AI assistant',
-    'open source',
-    'research',
-    'data analysis',
+    'gerenciamento de arquivos',
+    'assistente IA',
+    'Lynx AI',
+    'pesquisa',
+    'análise de dados',
   ],
-  authors: [{ name: 'Kortix Team', url: 'https://suna.so' }],
+  authors: [{ name: 'Apex7 AI Team', url: 'https://lynxai.com.br' }],
   creator:
-    'Kortix Team',
+    'Apex7 AI Team',
   publisher:
-    'Kortix Team',
+    'Apex7 AI',
   category: 'Technology',
-  applicationName: 'Suna',
+  applicationName: 'Lynx AI',
   formatDetection: {
     telephone: false,
     email: false,
@@ -66,17 +66,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Suna - Open Source Generalist AI Worker',
+    title: 'Lynx AI - Assistente IA Inteligente by Apex7 AI',
     description:
-      'Suna is a fully open source AI assistant that helps you accomplish real-world tasks with ease through natural conversation.',
+      'Lynx AI é um assistente de inteligência artificial avançado que ajuda você a realizar tarefas do mundo real com facilidade através de conversação natural.',
     url: siteConfig.url,
-    siteName: 'Suna',
+    siteName: 'Lynx AI',
     images: [
       {
         url: '/banner.png',
         width: 1200,
         height: 630,
-        alt: 'Suna - Open Source Generalist AI Worker',
+        alt: 'Lynx AI - Assistente IA Inteligente by Apex7 AI',
         type: 'image/png',
       },
     ],
@@ -85,17 +85,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Suna - Open Source Generalist AI Worker',
+    title: 'Lynx AI - Assistente IA Inteligente by Apex7 AI',
     description:
-      'Suna is a fully open source AI assistant that helps you accomplish real-world tasks with ease through natural conversation.',
-    creator: '@kortixai',
-    site: '@kortixai',
+      'Lynx AI é um assistente de inteligência artificial avançado que ajuda você a realizar tarefas do mundo real com facilidade através de conversação natural.',
+    creator: '@apex7ai',
+    site: '@apex7ai',
     images: [
       {
         url: '/banner.png',
         width: 1200,
         height: 630,
-        alt: 'Suna - Open Source Generalist AI Worker',
+        alt: 'Lynx AI - Assistente IA Inteligente by Apex7 AI',
       },
     ],
   },

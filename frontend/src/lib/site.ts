@@ -1,11 +1,10 @@
 export const siteConfig = {
-  name: 'Kortix Suna',
-  url: 'https://suna.so/',
-  description: 'Kortix AI',
+  name: 'Lynx AI',
+  url: 'https://lynxai.com.br/',
+  description: 'Lynx AI by Apex7 AI',
   links: {
-    twitter: 'https://x.com/kortixai',
-    github: 'https://github.com/kortix-ai/',
-    linkedin: 'https://www.linkedin.com/company/kortix/',
+    // Links will be configured for Apex7 AI
+    email: 'contato@apex7ai.com.br',
   },
 };
 

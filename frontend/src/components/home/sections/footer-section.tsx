@@ -19,11 +19,7 @@ export function FooterSection() {
     setMounted(true);
   }, []);
 
-  const logoSrc = !mounted
-    ? '/kortix-logo.svg'
-    : resolvedTheme === 'dark'
-      ? '/kortix-logo-white.svg'
-      : '/kortix-logo.svg';
+  const logoSrc = '/lynx-logo.png'; // Nova logo Lynx AI
 
   return (
     <footer id="footer" className="w-full pb-0 px-6">
@@ -133,16 +129,11 @@ export function FooterSection() {
           </div>
         </div>
       </div>
-      <Link
-        href="https://www.youtube.com/watch?v=nuf5BF1jvjQ"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full h-48 md:h-64 relative mt-24 z-0 cursor-pointer"
-      >
+      <div className="block w-full h-48 md:h-64 relative mt-24 z-0">
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-background z-10 from-40%" />
         <div className="absolute inset-0 ">
           <FlickeringGrid
-            text={tablet ? 'Agents' : 'Agents Agents Agents'}
+            text={tablet ? 'Lynx AI' : 'Lynx AI by Apex7 AI'}
             fontSize={tablet ? 60 : 90}
             className="h-full w-full"
             squareSize={2}
@@ -152,7 +143,7 @@ export function FooterSection() {
             flickerChance={0.1}
           />
         </div>
-      </Link>
+      </div>
     </footer>
   );
 }
