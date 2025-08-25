@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     'pesquisa',
     'análise de dados',
   ],
-  authors: [{ name: 'Apex7 AI Team', url: 'https://lynxai.com.br' }],
+  authors: [{ name: 'Lynx AI Team', url: 'https://lynxai.com.br' }],
   creator:
     'Apex7 AI Team',
   publisher:
@@ -88,8 +88,8 @@ export const metadata: Metadata = {
     title: 'Lynx AI - Assistente IA Inteligente by Apex7 AI',
     description:
       'Lynx AI é um assistente de inteligência artificial avançado que ajuda você a realizar tarefas do mundo real com facilidade através de conversação natural.',
-    creator: '@apex7ai',
-    site: '@apex7ai',
+    creator: '@lynxai',
+    site: '@lynxai',
     images: [
       {
         url: '/banner.png',

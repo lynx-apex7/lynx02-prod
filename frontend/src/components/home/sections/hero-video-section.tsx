@@ -12,7 +12,7 @@ export function HeroVideoSection() {
           Watch Intelligence in Motion
         </h2>
         <p className="text-muted-foreground text-center text-balance font-medium">
-          Watch how Suna executes complex workflows with precision and autonomy
+          Veja como o Lynx AI executa fluxos de trabalho complexos com precisão e autonomia
         </p>
       </SectionHeader>
 

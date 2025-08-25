@@ -46,15 +46,15 @@ interface Config {
 // Production tier IDs
 const PROD_TIERS: SubscriptionTiers = {
   FREE: {
-    priceId: 'price_1RILb4G6l1KZGqIrK4QLrx9i',
+    priceId: 'price_1Rz8sjA9A1JeVB2H7JarObj7',
     name: 'Free',
   },
   TIER_2_20: {
-    priceId: 'price_1RILb4G6l1KZGqIrhomjgDnO',
+    priceId: 'price_1RzACWA9A1JeVB2HS1Eq9gOT',
     name: '2h/$20',
   },
   TIER_6_50: {
-    priceId: 'price_1RILb4G6l1KZGqIr5q0sybWn',
+    priceId: 'price_1RzACdA9A1JeVB2HWHmM5AFh',
     name: '6h/$50',
   },
   TIER_12_100: {
@@ -62,7 +62,7 @@ const PROD_TIERS: SubscriptionTiers = {
     name: '12h/$100',
   },
   TIER_25_200: {
-    priceId: 'price_1RILb4G6l1KZGqIrGAD8rNjb',
+    priceId: 'price_1RzACkA9A1JeVB2HETA3IEWs',
     name: '25h/$200',
   },
   TIER_50_400: {
@@ -79,11 +79,11 @@ const PROD_TIERS: SubscriptionTiers = {
   },
   // Legacy yearly plans with 15% discount (12x monthly price with 15% off)
   TIER_2_20_YEARLY: {
-    priceId: 'price_1ReHB5G6l1KZGqIrD70I1xqM',
+    priceId: 'price_1RzACsA9A1JeVB2Ho0F1Y4j3',
     name: '2h/$204/year (legacy)',
   },
   TIER_6_50_YEARLY: {
-    priceId: 'price_1ReHAsG6l1KZGqIrlAog487C',
+    priceId: 'price_1RzACzA9A1JeVB2H18D2CmtQ',
     name: '6h/$510/year (legacy)',
   },
   TIER_12_100_YEARLY: {
@@ -91,7 +91,7 @@ const PROD_TIERS: SubscriptionTiers = {
     name: '12h/$1020/year (legacy)',
   },
   TIER_25_200_YEARLY: {
-    priceId: 'price_1ReH9uG6l1KZGqIrsvMLHViC',
+    priceId: 'price_1RzAD6A9A1JeVB2Hki5Tielu',
     name: '25h/$2040/year (legacy)',
   },
   TIER_50_400_YEARLY: {

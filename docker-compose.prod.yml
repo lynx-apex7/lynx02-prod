@@ -1,0 +1,183 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:8-alpine
+    container_name: lynx-redis
+    restart: unless-stopped
+    networks:
+      - lynx-network
+    volumes:
+      - redis_data:/data
+      - ./backend/services/docker/redis.conf:/usr/local/etc/redis/redis.conf:ro
+    command: redis-server /usr/local/etc/redis/redis.conf --appendonly yes --bind 0.0.0.0 --protected-mode no --maxmemory 6gb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+        reservations:
+          memory: 2G
+
+  backend:
+    image: ghcr.io/suna-ai/suna-backend:latest
+    container_name: lynx-backend
+    platform: linux/amd64
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    networks:
+      - traefik-network
+      - lynx-network
+    volumes:
+      - ./backend/.env:/app/.env:ro
+      - ./logs/backend:/app/logs
+    env_file:
+      - ./backend/.env
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=
+      - REDIS_SSL=False
+      - LOG_LEVEL=INFO
+    depends_on:
+      redis:
+        condition: service_healthy
+      worker:
+        condition: service_started
+    labels:
+      - "traefik.enable=true"
+      # API routes
+      - "traefik.http.routers.lynx-backend.rule=Host(`lynx.apex7ai.com`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.lynx-backend.entrypoints=websecure"
+      - "traefik.http.routers.lynx-backend.tls.certresolver=letsencrypt"
+      - "traefik.http.services.lynx-backend.loadbalancer.server.port=8000"
+      # Middleware for API
+      - "traefik.http.middlewares.lynx-api-strip.stripprefix.prefixes=/api"
+      - "traefik.http.routers.lynx-backend.middlewares=lynx-api-strip"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+        reservations:
+          memory: 1G
+
+  worker:
+    image: ghcr.io/suna-ai/suna-backend:latest
+    container_name: lynx-worker
+    platform: linux/amd64
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: uv run dramatiq --skip-logging --processes 4 --threads 4 run_agent_background
+    restart: unless-stopped
+    networks:
+      - lynx-network
+    volumes:
+      - ./backend/.env:/app/.env:ro
+      - ./logs/worker:/app/logs
+    env_file:
+      - ./backend/.env
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=
+      - REDIS_SSL=False
+      - LOG_LEVEL=INFO
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "uv", "run", "worker_health.py"]
+      timeout: 20s
+      interval: 30s
+      start_period: 40s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 512M
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: lynx-frontend
+    restart: unless-stopped
+    networks:
+      - traefik-network
+    volumes:
+      - ./frontend/.env.local:/app/.env.local:ro
+      - ./logs/frontend:/app/logs
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_ENV_MODE=PRODUCTION
+      - NEXT_PUBLIC_APP_URL=https://lynx.apex7ai.com
+      - NEXT_PUBLIC_BACKEND_URL=https://lynx.apex7ai.com/api
+    depends_on:
+      - backend
+    labels:
+      - "traefik.enable=true"
+      # Main domain
+      - "traefik.http.routers.lynx-frontend.rule=Host(`lynx.apex7ai.com`)"
+      - "traefik.http.routers.lynx-frontend.entrypoints=websecure"
+      - "traefik.http.routers.lynx-frontend.tls.certresolver=letsencrypt"
+      - "traefik.http.services.lynx-frontend.loadbalancer.server.port=3000"
+      # Priority for frontend (lower number = higher priority)
+      - "traefik.http.routers.lynx-frontend.priority=1"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 256M
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  traefik-network:
+    external: true
+  lynx-network:
+    driver: bridge
+    internal: true

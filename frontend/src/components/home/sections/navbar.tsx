@@ -62,7 +62,7 @@ export function Navbar() {
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const { user } = useAuth();
-  const { formattedStars, loading: starsLoading } = useGitHubStars('kortix-ai', 'suna');
+  // Removido GitHub stars para Lynx AI
   const router = useRouter();
   const pathname = usePathname();
 
@@ -104,11 +104,7 @@ export function Navbar() {
   const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
   const handleOverlayClick = () => setIsDrawerOpen(false);
 
-  const logoSrc = !mounted
-    ? '/kortix-logo.svg'
-    : resolvedTheme === 'dark'
-      ? '/kortix-logo-white.svg'
-      : '/kortix-logo.svg';
+  const logoSrc = '/lynx-logo.png'; // Logo único para ambos os temas
 
   return (
     <header
@@ -136,7 +132,7 @@ export function Navbar() {
               <Link href="/" className="flex items-center gap-3">
                 <Image
                   src={logoSrc}
-                  alt="Kortix Logo"
+                  alt="Lynx AI Logo"
                   width={80}
                   height={14}
                   className="md:w-[100px] md:h-[18px]"
@@ -154,18 +150,7 @@ export function Navbar() {
             <div className="flex items-center justify-end flex-shrink-0 w-auto md:w-[200px] ml-auto">
               <div className="flex flex-row items-center gap-2 md:gap-3 shrink-0">
                 <div className="flex items-center space-x-3">
-                  <Link
-                    href="https://github.com/kortix-ai/suna"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden md:flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium rounded-full bg-transparent text-muted-foreground/60 hover:text-muted-foreground hover:bg-accent/30 transition-all duration-200"
-                    aria-label="GitHub Repository"
-                  >
-                    <Github className="size-3.5" />
-                    <span className={`text-xs font-medium transition-opacity duration-200 ${starsLoading ? 'opacity-50' : 'opacity-100'}`}>
-                      {formattedStars}
-                    </span>
-                  </Link>
+                  {/* Removido link GitHub para Lynx AI */}
                   {user ? (
                     <Link
                       className="bg-secondary h-8 hidden md:flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-primary-foreground dark:text-secondary-foreground w-fit px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-white/[0.12]"
@@ -226,14 +211,11 @@ export function Navbar() {
                   <Link href="/" className="flex items-center gap-3">
                     <Image
                       src={logoSrc}
-                      alt="Kortix Logo"
+                      alt="Lynx AI Logo"
                       width={120}
                       height={22}
                       priority
                     />
-                    <span className="font-medium text-primary text-sm">
-                      / Suna
-                    </span>
                   </Link>
                   <button
                     onClick={toggleDrawer}
@@ -291,19 +273,7 @@ export function Navbar() {
                   </AnimatePresence>
                 </motion.ul>
 
-                {/* GitHub link for mobile */}
-                <Link
-                  href="https://github.com/kortix-ai/suna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1.5 h-7 px-2.5 text-xs font-medium rounded-full bg-transparent text-muted-foreground/60 hover:text-muted-foreground hover:bg-accent/30 transition-all duration-200"
-                  aria-label="GitHub Repository"
-                >
-                  <Github className="size-3.5" />
-                  <span className={`text-xs font-medium transition-opacity duration-200 ${starsLoading ? 'opacity-50' : 'opacity-100'}`}>
-                    ⭐ {formattedStars}
-                  </span>
-                </Link>
+                {/* Removido GitHub link mobile para Lynx AI */}
 
                 {/* Action buttons */}
                 <div className="flex flex-col gap-2">

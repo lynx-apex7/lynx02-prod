@@ -3,8 +3,8 @@ export const siteConfig = {
   url: 'https://lynxai.com.br/',
   description: 'Lynx AI by Apex7 AI',
   links: {
-    // Links will be configured for Apex7 AI
-    email: 'contato@apex7ai.com.br',
+    // Links will be configured for Lynx AI
+    email: 'contato@lynxai.com.br',
   },
 };
 

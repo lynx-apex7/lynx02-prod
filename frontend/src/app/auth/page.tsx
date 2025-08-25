@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { SubmitButton } from '@/components/ui/submit-button';
 import { Input } from '@/components/ui/input';
 import GoogleSignIn from '@/components/GoogleSignIn';
@@ -30,7 +31,6 @@ import {
   DialogFooter,
 } from '@/components/ui/dialog';
 import GitHubSignIn from '@/components/GithubSignIn';
-import { KortixLogo } from '@/components/sidebar/kortix-logo';
 import { Ripple } from '@/components/ui/ripple';
 import { ReleaseBadge } from '@/components/auth/release-badge';
 
@@ -271,7 +271,13 @@ function LoginContent() {
       <div className="min-h-screen bg-background relative">
         <div className="absolute top-6 left-6 z-10">
           <Link href="/" className="flex items-center">
-            <KortixLogo size={28} />
+            <Image
+              src="/lynx-logo.png"
+              alt="Lynx AI Logo"
+              width={120}
+              height={28}
+              priority
+            />
           </Link>
         </div>
         <div className="flex min-h-screen">

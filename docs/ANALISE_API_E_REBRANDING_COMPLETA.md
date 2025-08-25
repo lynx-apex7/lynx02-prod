@@ -87,9 +87,77 @@ email: 'support@kortix.ai', // ALTERAR
 
 ### **🖼️ ASSETS PARA SUBSTITUIR:**
 ```
-/frontend/public/favicon.png → Nova logo Lynx AI
-/frontend/public/banner.png → Banner Lynx AI  
-/frontend/public/kortix-logo*.svg → docs/images/lynxai-apex7.png
+/frontend/public/favicon.ico → lynx-logo.png (FEITO ✅)
+/frontend/public/banner.png → Banner Lynx AI (PENDENTE)
+/frontend/public/kortix-logo*.svg → lynx-logo.png (FEITO ✅)
+```
+
+## 🎯 **REBRANDING COMPLETO - FEITO ✅**
+
+### **CORREÇÕES CRÍTICAS APLICADAS:**
+
+#### **1. NAVBAR (navbar.tsx)** ✅
+- ❌ `logoSrc = kortix-logo.svg/kortix-logo-white.svg` 
+- ✅ `logoSrc = '/lynx-logo.png'` (fixo, não muda com tema)
+- ❌ `alt="Kortix Logo"`
+- ✅ `alt="Lynx AI Logo"`  
+- ❌ Links para `https://github.com/kortix-ai/suna`
+- ✅ **REMOVIDOS** todos links GitHub
+- ❌ `useGitHubStars('kortix-ai', 'suna')`
+- ✅ **REMOVIDO** GitHub stars
+- ❌ `"/ Suna"` no mobile
+- ✅ **REMOVIDO**
+
+#### **2. PÁGINA AUTH (auth/page.tsx)** ✅
+- ❌ `<KortixLogo size={28} />`
+- ✅ `<Image src="/lynx-logo.png" alt="Lynx AI Logo" width={120} height={28} />`
+- ❌ `import { KortixLogo }`
+- ✅ `import Image from 'next/image'`
+
+#### **3. SEÇÃO OPEN SOURCE** ✅
+- ❌ `"100% Open Source"`
+- ✅ `"Tecnologia Avançada"`
+- ❌ `"Suna is fully open source..."`
+- ✅ `"Lynx AI utiliza tecnologia de ponta..."`
+
+#### **4. FOOTER** ✅ (Feito anteriormente)
+- ❌ Links: GitHub, X, LinkedIn  
+- ✅ **REMOVIDOS** - Substituído por texto "Tecnologia Avançada by Apex7 AI"
+
+#### **5. HOME.TSX** ✅ (Feito anteriormente)  
+- ❌ 111+ referências "Kortix Suna"
+- ✅ **TODAS** substituídas por "Lynx AI"
+- ❌ Textos em inglês sobre open source
+- ✅ Textos em português com posicionamento comercial
+
+#### **6. FAVICON** ✅
+- ❌ favicon.ico antigo
+- ✅ lynx-logo.png copiado para favicon.ico
+
+#### **7. HERO SECTION** ✅ (NOVO)
+- ❌ `"Kortix – the simplest way to migrate from human to AI."`
+- ✅ `"Lynx AI – a maneira mais simples de automatizar com inteligência artificial."`
+
+#### **8. DASHBOARD/CHAT** ✅ (NOVO)
+- ❌ `"Suna's Computer"` no tool panel
+- ✅ `"Lynx AI Computer"`
+- ❌ `"See Suna in action"` nas seções
+- ✅ `"Veja o Lynx AI em ação"`
+- ❌ Textos sobre Kortix Suna nos dialogs
+- ✅ Textos sobre Lynx AI
+
+#### **9. SEÇÃO TECNOLOGIA** ✅ (NOVO)
+- ❌ `"Open Source Security"` / `"Transparency & Trust"`
+- ✅ `"Segurança Corporativa"` / `"Transparência & Confiança"`
+- ❌ Link `"View on GitHub"`
+- ✅ Link `"Entre em Contato"` (mailto:contato@lynxai.com.br)
+- ❌ Textos em inglês sobre open source
+- ✅ Textos em português sobre tecnologia corporativa
+
+### **🌐 CONFIGURAÇÕES DE PRODUÇÃO:**
+```
+NEXT_PUBLIC_APP_URL=https://lynxai.com.br
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 ```
 
 ### **📄 FOOTER COMPLETO:**
@@ -134,6 +202,16 @@ href="https://www.youtube.com/watch?v=nuf5BF1jvjQ" // REMOVER/ALTERAR
 ### **🏢 EMPRESA:**
 - **Apex7 AI** - Empresa principal
 - **Lynx AI** - Produto/tecnologia da Apex7 AI
+
+### **🌐 DOMÍNIOS CONFIGURADOS:**
+- **Principal**: `lynxai.com.br` (a ser adquirido)
+- **Internacional**: `lynxai.com` (a ser adquirido)
+- **URL Principal**: `https://lynxai.com.br/`
+
+### **📧 EMAILS CONFIGURADOS:**
+- **Contato Principal**: `contato@lynxai.com.br`
+- **Suporte Técnico**: `suporte@lynxai.com.br`
+- **Social Media**: `@lynxai` (Twitter/X, Instagram, etc.)
 
 ### **📢 MESSAGING SUGERIDO:**
 ```

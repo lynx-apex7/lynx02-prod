@@ -64,8 +64,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   keywords: ['AI Worker', 'Assistente IA', 'Inteligência Artificial', 'Autonomous Agent'],
   links: {
-    email: 'contato@apex7ai.com.br',
-    // Redes sociais serão configuradas posteriormente para Apex7 AI
+    email: 'contato@lynxai.com.br',
+    // Redes sociais serão configuradas posteriormente para Lynx AI
   },
   nav: {
     links: [
@@ -507,7 +507,7 @@ export const siteConfig = {
         id: 1,
         title: 'Request an Action',
         content:
-          'Speak or type your command—let Kortix Suna capture your intent. Your request instantly sets the process in motion.',
+          'Fale ou digite seu comando—deixe o Lynx AI capturar sua intenção. Sua solicitação coloca o processo em movimento instantaneamente.',
         image:
           'https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
@@ -515,7 +515,7 @@ export const siteConfig = {
         id: 2,
         title: 'AI Understanding & Planning',
         content:
-          'Suna analyzes your request, understands the context, and develops a structured plan to complete the task efficiently.',
+          'O Lynx AI analisa sua solicitação, entende o contexto e desenvolve um plano estruturado para completar a tarefa eficientemente.',
         image:
           'https://images.unsplash.com/photo-1686170287433-c95faf6d3608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8fA%3D%3D',
       },
@@ -523,7 +523,7 @@ export const siteConfig = {
         id: 3,
         title: 'Autonomous Execution',
         content:
-          'Using its capabilities and integrations, Suna executes the task independently, handling any complexities along the way.',
+          'Usando suas capacidades e integrações, o Lynx AI executa a tarefa independentemente, lidando com qualquer complexidade no caminho.',
         image:
           'https://images.unsplash.com/photo-1720378042271-60aff1e1c538?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D',
       },
@@ -531,7 +531,7 @@ export const siteConfig = {
         id: 4,
         title: 'Results & Learning',
         content:
-          'Suna delivers results and learns from each interaction, continuously improving its performance to better serve your needs.',
+          'O Lynx AI entrega resultados e aprende com cada interação, melhorando continuamente seu desempenho para atender melhor suas necessidades.',
         image:
           'https://images.unsplash.com/photo-1666882990322-e7f3b8df4f75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
       },
@@ -568,43 +568,43 @@ export const siteConfig = {
         ),
         title: 'Intelligent Data Analysis',
         description:
-          "Transform raw data into actionable insights in seconds. Make better decisions with Suna's real-time, adaptive intelligence.",
+          "Transforme dados brutos em insights acionáveis em segundos. Tome melhores decisões com a inteligência adaptativa em tempo real do Lynx AI.",
       },
       {
         id: 4,
         content: <FourthBentoAnimation once={false} />,
         title: 'Complete Customization',
         description:
-          'Tailor Suna to your specific needs. As an open source solution, you have full control over its capabilities, integrations, and implementation.',
+          'Personalize o Lynx AI para suas necessidades específicas. Com nossa tecnologia avançada, você tem controle total sobre suas capacidades, integrações e implementação.',
       },
     ],
   },
   benefits: [
     {
       id: 1,
-      text: "Automate everyday tasks with Suna's powerful AI capabilities.",
+      text: "Automatize tarefas diárias com as poderosas capacidades de IA do Lynx AI.",
       image: '/Device-6.png',
     },
     {
       id: 2,
-      text: 'Increase productivity with autonomous task completion.',
+      text: 'Aumente a produtividade com conclusão autônoma de tarefas.',
       image: '/Device-7.png',
     },
     {
       id: 3,
-      text: 'Improve focus on high-value work as Suna handles the routine.',
+      text: 'Melhore o foco em trabalho de alto valor enquanto o Lynx AI cuida da rotina.',
       image: '/Device-8.png',
     },
     {
       id: 4,
-      text: 'Access cutting-edge AI as an open source, transparent solution.',
+      text: 'Acesse IA de ponta com uma solução transparente e confiável.',
       image: '/Device-1.png',
     },
   ],
   growthSection: {
-    title: 'Open Source & Secure',
+    title: 'Seguro & Confiável',
     description:
-      'Where advanced security meets complete transparency—designed to protect your data while providing full access to the code.',
+      'Onde segurança avançada encontra transparência completa—projetado para proteger seus dados com tecnologia de ponta.',
     items: [
       {
         id: 1,
@@ -884,9 +884,9 @@ export const siteConfig = {
           </div>
         ),
 
-        title: 'Open Source Security',
+        title: 'Segurança Avançada',
         description:
-          'Benefit from the security of open source code that thousands of eyes can review, audit, and improve.',
+          'Beneficie-se da segurança de código que milhares de especialistas podem revisar, auditar e melhorar continuamente.',
       },
       {
         id: 2,
@@ -896,15 +896,15 @@ export const siteConfig = {
           </div>
         ),
 
-        title: 'Community Powered',
+        title: 'Powered by Innovation',
         description:
-          "Join a thriving community of developers and users continuously enhancing and expanding Suna's capabilities.",
+          "Junte-se a uma comunidade próspera de desenvolvedores e usuários que continuamente aprimoram e expandem as capacidades do Lynx AI.",
       },
     ],
   },
   quoteSection: {
     quote:
-      'Kortix Suna has transformed how we approach everyday tasks. The level of automation it provides, combined with its open source nature, makes it an invaluable tool for our entire organization.',
+      'O Lynx AI transformou como abordamos tarefas cotidianas. O nível de automação que ele oferece, combinado com sua natureza inovadora, o torna uma ferramenta inestimável para toda nossa organização.',
     author: {
       name: 'Alex Johnson',
       role: 'CTO, Innovatech',
@@ -1179,7 +1179,7 @@ export const siteConfig = {
   faqSection: {
     title: 'Frequently Asked Questions',
     description:
-      "Answers to common questions about Kortix Suna and its capabilities. If you have any other questions, please don't hesitate to contact us.",
+      "Respostas às perguntas mais comuns sobre o Lynx AI e suas capacidades. Se você tiver outras dúvidas, não hesite em nos contatar.",
     faQitems: [
       {
         id: 1,
@@ -1189,33 +1189,33 @@ export const siteConfig = {
       },
       {
         id: 2,
-        question: 'How does Kortix Suna work?',
+        question: 'Como o Lynx AI funciona?',
         answer:
-          'Kortix Suna works by analyzing your requirements, leveraging advanced AI algorithms to understand context, and executing tasks based on your instructions. It can integrate with your workflow, learn from feedback, and continuously improve its performance.',
+          'O Lynx AI funciona analisando seus requisitos, aproveitando algoritmos de IA avançados para entender o contexto e executando tarefas baseadas em suas instruções. Ele pode se integrar ao seu fluxo de trabalho, aprender com feedbacks e melhorar continuamente seu desempenho.',
       },
       {
         id: 3,
-        question: 'Is Kortix Suna really free?',
+        question: 'O Lynx AI é realmente acessível?',
         answer:
-          'Yes, Kortix Suna is completely free and open source. We believe in democratizing AI technology and making it accessible to everyone. You can use it, modify it, and contribute to its development without any cost.',
+          'Sim, o Lynx AI oferece planos flexíveis para diferentes necessidades. Acreditamos em democratizar a tecnologia de IA e torná-la acessível a todos. Você pode começar com nosso plano básico e escalar conforme sua necessidade.',
       },
       {
         id: 4,
-        question: 'Can I integrate Suna with my existing tools?',
+        question: 'Posso integrar o Lynx AI com minhas ferramentas existentes?',
         answer:
-          'Yes, Kortix Suna is designed to be highly compatible with popular tools and platforms. We offer APIs and pre-built integrations for seamless connection with your existing workflow tools and systems.',
+          'Sim, o Lynx AI é projetado para ser altamente compatível com ferramentas e plataformas populares. Oferecemos APIs e integrações pré-construídas para conexão perfeita com suas ferramentas de fluxo de trabalho e sistemas existentes.',
       },
       {
         id: 5,
-        question: 'How can I contribute to Kortix Suna?',
+        question: 'Como posso contribuir com o Lynx AI?',
         answer:
-          'You can contribute to Kortix Suna by submitting pull requests on GitHub, reporting bugs, suggesting new features, or helping with documentation. Join our Discord community to connect with other contributors and Hire Suna.',
+          'Você pode contribuir com o Lynx AI fornecendo feedback, sugerindo novos recursos ou participando de nossa comunidade. Entre em contato conosco para conectar-se com outros usuários e compartilhar suas experiências.',
       },
       {
         id: 6,
-        question: 'How does Kortix Suna save me time?',
+        question: 'Como o Lynx AI me economiza tempo?',
         answer:
-          'Kortix Suna automates repetitive tasks, streamlines workflows, and provides quick solutions to common challenges. This automation and efficiency can save hours of manual work, allowing you to focus on more strategic activities.',
+          'O Lynx AI automatiza tarefas repetitivas, simplifica fluxos de trabalho e fornece soluções rápidas para desafios comuns. Essa automação e eficiência podem economizar horas de trabalho manual, permitindo que você se concentre em atividades mais estratégicas.',
       },
     ],
   },
@@ -1234,14 +1234,14 @@ export const siteConfig = {
       title: 'Apex7 AI',
       links: [
         { id: 1, title: 'Sobre', url: '#company' },
-        { id: 3, title: 'Contato', url: 'mailto:contato@apex7ai.com.br' },
+        { id: 3, title: 'Contato', url: 'mailto:contato@lynxai.com.br' },
       ],
     },
     {
       title: 'Recursos',
       links: [
         { id: 5, title: 'Documentação', url: '#technology' },
-        { id: 7, title: 'Suporte', url: 'mailto:suporte@apex7ai.com.br' },
+        { id: 7, title: 'Suporte', url: 'mailto:suporte@lynxai.com.br' },
       ],
     },
     {

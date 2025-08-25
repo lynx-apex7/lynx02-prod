@@ -229,7 +229,7 @@ export const MessageInput = forwardRef<HTMLTextAreaElement, MessageInputProps>(
                   <p role='button' className='text-sm text-amber-500 hidden sm:block cursor-pointer' onClick={() => setBillingModalOpen(true)}>Upgrade for more usage</p>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>The free tier is severely limited by the amount of usage. Upgrade to experience the full power of Suna.</p>
+                  <p>O plano gratuito tem limitações de uso. Faça upgrade para experimentar todo o poder do Lynx AI.</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>

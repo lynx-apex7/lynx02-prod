@@ -30,11 +30,11 @@ export function UseCasesSection() {
     >
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
-          See Suna in action
+          Veja o Lynx AI em ação
         </h2>
         <p className="text-muted-foreground text-center text-balance font-medium">
-          Explore real-world examples of how Suna completes complex tasks
-          autonomously
+          Explore exemplos do mundo real de como o Lynx AI completa tarefas complexas
+          de forma autônoma
         </p>
       </SectionHeader>
 
