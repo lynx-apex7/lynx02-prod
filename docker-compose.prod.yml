@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   redis:
-    image: redis:8-alpine
+    image: redis:7-alpine
     container_name: lynx-redis
     restart: unless-stopped
     networks:
@@ -10,7 +10,7 @@ services:
     volumes:
       - redis_data:/data
       - ./backend/services/docker/redis.conf:/usr/local/etc/redis/redis.conf:ro
-    command: redis-server /usr/local/etc/redis/redis.conf --appendonly yes --bind 0.0.0.0 --protected-mode no --maxmemory 6gb --maxmemory-policy allkeys-lru
+    command: redis-server /usr/local/etc/redis/redis.conf --appendonly yes --bind 0.0.0.0 --protected-mode no --maxmemory 4gb --maxmemory-policy allkeys-lru
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
@@ -25,12 +25,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 6G
+          memory: 4G
         reservations:
-          memory: 2G
+          memory: 1G
 
   backend:
-    image: ghcr.io/suna-ai/suna-backend:latest
     container_name: lynx-backend
     platform: linux/amd64
     build:
@@ -42,7 +41,6 @@ services:
       - lynx-network
     volumes:
       - ./backend/.env:/app/.env:ro
-      - ./logs/backend:/app/logs
     env_file:
       - ./backend/.env
     environment:
@@ -59,7 +57,7 @@ services:
     labels:
       - "traefik.enable=true"
       # API routes
-      - "traefik.http.routers.lynx-backend.rule=Host(`lynx.apex7ai.com`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.lynx-backend.rule=Host(`${DOMAIN:-lynx.apex7ai.com}`) && PathPrefix(`/api`)"
       - "traefik.http.routers.lynx-backend.entrypoints=websecure"
       - "traefik.http.routers.lynx-backend.tls.certresolver=letsencrypt"
       - "traefik.http.services.lynx-backend.loadbalancer.server.port=8000"
@@ -80,12 +78,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 3G
+          memory: 2G
         reservations:
-          memory: 1G
+          memory: 512M
 
   worker:
-    image: ghcr.io/suna-ai/suna-backend:latest
     container_name: lynx-worker
     platform: linux/amd64
     build:
@@ -97,7 +94,6 @@ services:
       - lynx-network
     volumes:
       - ./backend/.env:/app/.env:ro
-      - ./logs/worker:/app/logs
     env_file:
       - ./backend/.env
     environment:
@@ -122,32 +118,28 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2G
+          memory: 1.5G
         reservations:
-          memory: 512M
+          memory: 256M
 
   frontend:
+    container_name: lynx-frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: lynx-frontend
     restart: unless-stopped
     networks:
       - traefik-network
     volumes:
       - ./frontend/.env.local:/app/.env.local:ro
-      - ./logs/frontend:/app/logs
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_ENV_MODE=PRODUCTION
-      - NEXT_PUBLIC_APP_URL=https://lynx.apex7ai.com
-      - NEXT_PUBLIC_BACKEND_URL=https://lynx.apex7ai.com/api
     depends_on:
       - backend
     labels:
       - "traefik.enable=true"
       # Main domain
-      - "traefik.http.routers.lynx-frontend.rule=Host(`lynx.apex7ai.com`)"
+      - "traefik.http.routers.lynx-frontend.rule=Host(`${DOMAIN:-lynx.apex7ai.com}`)"
       - "traefik.http.routers.lynx-frontend.entrypoints=websecure"
       - "traefik.http.routers.lynx-frontend.tls.certresolver=letsencrypt"
       - "traefik.http.services.lynx-frontend.loadbalancer.server.port=3000"
@@ -181,3 +173,4 @@ networks:
   lynx-network:
     driver: bridge
     internal: true
+

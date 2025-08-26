@@ -8,7 +8,7 @@
 - ✅ **Price IDs**: Atualizados com seus IDs reais
 - ✅ **ENVs**: Templates de produção prontos
 - ✅ **Stripe**: 100% configurado
-- ✅ **Sandbox removido**: Economia de recursos VPS
+- ✅ **Sandbox preservado**: Daytona configurado via setup.py
 
 ---
 
@@ -18,12 +18,12 @@
 
 ### **🎯 CARACTERÍSTICAS:**
 - ✅ **Traefik integration**: Labels corretos para `lynx.apex7ai.com`
-- ✅ **Resource limits**: 6GB Redis, 3GB Backend, 2GB Worker, 1GB Frontend  
+- ✅ **Resource limits**: 4GB Redis, 2GB Backend, 1.5GB Worker, 1GB Frontend  
 - ✅ **Healthchecks**: Todos os serviços monitorados
 - ✅ **Logging**: JSON rotacionado (10MB, 3 arquivos)
 - ✅ **Networks**: Externa (traefik-network) + interna (lynx-network)
 - ✅ **SSL automático**: Via Let's Encrypt
-- ❌ **Sandbox removido**: Economiza recursos VPS
+- ✅ **Sandbox Daytona**: Externo (nuvem) - configurado via ENVs
 
 ### **🌐 DOMÍNIOS CONFIGURADOS:**
 - **Frontend**: `https://lynx.apex7ai.com`
