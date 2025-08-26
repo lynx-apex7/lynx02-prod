@@ -46,7 +46,7 @@ O sandbox **NÃO** aparece no `docker-compose.prod.yml` porque:
 ```bash
 cd /opt/docker-stack
 mkdir lynx-ai && cd lynx-ai
-git clone https://github.com/lynx-apex7/Lynx02-prod.git .
+git clone https://github.com/lynx-apex7/lynx02-prod.git .
 ```
 
 ### **2. CONFIGURAR ENVs:**
