@@ -53,7 +53,7 @@ Você forneceu o **mesmo ID** para $10 e $25:
 ```
 
 **📝 AÇÃO NECESSÁRIA:** Verificar o ID correto do pacote $25 no seu Stripe Dashboard.
-
+ja verifiquei e atualizei aqui também.
 ---
 
 ## 🗂️ **ARQUIVOS QUE PRECISAM SER ATUALIZADOS**
@@ -120,8 +120,8 @@ const PROD_TIERS: SubscriptionTiers = {
 ENV_MODE=production
 
 # 🔐 STRIPE (apenas estas 3!)
-STRIPE_SECRET_KEY=sk_live_xxxxxxxxxx
-STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxx  
+STRIPE_SECRET_KEY=sk_live_SUA_CHAVE_AQUI
+STRIPE_WEBHOOK_SECRET=whsec_SEU_WEBHOOK_SECRET  
 STRIPE_PRODUCT_ID=prod_SuyqObP0pVNiPJ  # SEU produto
 
 # 🌐 DOMÍNIO

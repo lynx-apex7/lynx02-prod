@@ -9,7 +9,7 @@
 
 ### **SITUAÇÃO ATUAL:**
 ```bash
-OPENROUTER_API_KEY=sk-or-v1-... ✅ ($1 disponível)
+OPENROUTER_API_KEY=sk-or-v1-SUA_CHAVE_AQUI ✅
 ANTHROPIC_API_KEY=sk-ant-api03-... ✅ ($3.7 gastos)
 MODEL_TO_USE=claude-3-7-sonnet-latest ❌ (usando Anthropic direto)
 ```

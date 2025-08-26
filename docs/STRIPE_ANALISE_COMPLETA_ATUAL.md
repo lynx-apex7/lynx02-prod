@@ -85,8 +85,8 @@ NEXT_PUBLIC_ENV_MODE=LOCAL
 ```env
 ENV_MODE=production
 NEXT_PUBLIC_ENV_MODE=PRODUCTION
-STRIPE_SECRET_KEY=sk_live_xxxxx
-STRIPE_WEBHOOK_SECRET=whsec_xxxxx
+STRIPE_SECRET_KEY=sk_live_SUA_CHAVE_AQUI
+STRIPE_WEBHOOK_SECRET=whsec_SEU_WEBHOOK_SECRET
 ```
 **Comportamento:**
 - 💳 **Billing ativo**: Stripe funcionando
