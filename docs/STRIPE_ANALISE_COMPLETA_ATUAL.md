@@ -101,14 +101,14 @@ STRIPE_WEBHOOK_SECRET=whsec_SEU_WEBHOOK_SECRET
 
 ### **1. STRIPE_SECRET_KEY** ✅ (você tem)
 ```env
-STRIPE_SECRET_KEY=sk_live_xxxxxxxxxxxxxxxxx
+STRIPE_SECRET_KEY=sk_live_SUA_CHAVE_AQUI
 ```
 - **Função**: Comunicação backend ↔ Stripe
 - **Status**: ✅ Você já possui
 
 ### **2. STRIPE_WEBHOOK_SECRET** ⚠️ (precisa criar)
 ```env
-STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxxxxxx
+STRIPE_WEBHOOK_SECRET=whsec_SEU_WEBHOOK_SECRET
 ```
 - **Função**: Validar webhooks do Stripe
 - **Como obter**: Criar webhook endpoint no Stripe Dashboard
@@ -267,8 +267,8 @@ ENV_MODE=production
 NEXT_PUBLIC_ENV_MODE=PRODUCTION
 
 # ADICIONAR CHAVES STRIPE  
-STRIPE_SECRET_KEY=sk_live_xxxxxxxxxx
-STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxx
+STRIPE_SECRET_KEY=sk_live_SUA_CHAVE_AQUI
+STRIPE_WEBHOOK_SECRET=whsec_SEU_WEBHOOK_SECRET
 
 # VERIFICAR SUPABASE PRODUÇÃO
 SUPABASE_URL=https://your-prod-project.supabase.co
